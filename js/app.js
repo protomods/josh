@@ -2,7 +2,7 @@ var model = {
     answer: "",
     answerToggle: false,
     needsReset: false,
-    petitionText: "Peter please answer the following question"
+    petitionText: "Josh please answer the following question"
 }
 
 var controller = {
@@ -33,8 +33,8 @@ var controller = {
     },
     getAnswer: () => {
         const invalidResponse = [
-            "That's not how you petition to Peter.",
-            "Invalid petition. Please try again.",
+            "That's not how you petition to Josh.",
+            "Invalid Request. Please try again.",
             "You're not asking correctly",
             "Why should I answer to that?",
             "Please try again tomorrow. Or never...",
@@ -42,13 +42,13 @@ var controller = {
             "Not now, I'm busy. Maybe later.",
             "Fix your petition please.",
         ];
-        const invalidQuestion = "Please ask Peter a valid question.";
+        const invalidQuestion = "Please ask Josh a valid question.";
         model.needsReset = true;
 
         if (!view.getQuestion()) {                  // Valid Question check
             return invalidQuestion;
         } else if(model.answer) {                   // Valid Petition check
-            return "Peter says " + model.answer;
+            return "Josh says " + model.answer;
         } else {                                    // Invalid Response
             let randomNum = Math.floor(Math.random() * invalidResponse.length);
             return invalidResponse[randomNum];
