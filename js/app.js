@@ -33,14 +33,14 @@ var controller = {
     },
     getAnswer: () => {
         const invalidResponse = [
-            "That's not how you petition to Josh.",
+            "That's not how you ask to Josh.",
             "Invalid Request. Please try again.",
             "You're not asking correctly",
             "Why should I answer to that?",
             "Please try again tomorrow. Or never...",
             "I'm tired... Try again another time.",
             "Not now, I'm busy. Maybe later.",
-            "Fix your petition please.",
+            "Fix your request please.",
         ];
         const invalidQuestion = "Please ask Josh a valid question.";
         model.needsReset = true;
